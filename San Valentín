@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Valentín</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+        #contenedor {
+            position: relative;
+            display: inline-block;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        #no {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>¿Quieres ser mi San Valentín? ❤️</h2>
+    <div id="contenedor">
+        <button onclick="aceptar()">Sí</button>
+        <button id="no" onmouseover="moverBoton()">No</button>
+    </div>
+
+    <script>
+        function aceptar() {
+            alert("¡Sabía que dirías que sí! ❤️");
+        }
+
+        function moverBoton() {
+            let x = Math.random() * window.innerWidth * 0.7;
+            let y = Math.random() * window.innerHeight * 0.7;
+            document.getElementById("no").style.left = `${x}px`;
+            document.getElementById("no").style.top = `${y}px`;
+        }
+    </script>
+
+</body>
+</html
